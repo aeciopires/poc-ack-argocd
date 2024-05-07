@@ -1,0 +1,21 @@
+apiVersion: lambda.services.k8s.aws/v1alpha1
+kind: Function
+metadata:
+ name: aecio-ack-lambda-hello-word
+ namespace: default
+ annotations:
+   services.k8s.aws/region: us-east-1
+spec:
+ name: aecio-ack-lambda-hello-word
+ packageType: Image
+ code:
+     imageURI: 743047814061.dkr.ecr.us-east-1.amazonaws.com/aecio-ack-lambda-hello-word:latest
+ role: arn:aws:iam::743047814061:role/aecio-ack-lambda-hello-word
+ description: function created by ACK lambda-controller e2e tests
+ environment:
+  variables:
+    NAME: "ISAAC"
+    SURNAME: "GUI2024"
+    CONFIA: "YES"
+ tags:
+    poc: "true"
