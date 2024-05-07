@@ -17,5 +17,6 @@ spec:
     NAME: "ISAAC"
     SURNAME: "GUI2024"
     CONFIA: "YES"
+    AUTHOR: "AECIO"
  tags:
     poc: "true"
