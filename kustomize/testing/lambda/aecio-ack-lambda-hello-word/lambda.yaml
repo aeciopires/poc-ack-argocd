@@ -1,16 +1,16 @@
 apiVersion: lambda.services.k8s.aws/v1alpha1
 kind: Function
 metadata:
- name: aecio-ack-lambda-hello-word
+ name: CHANGE_HERE
  namespace: default
  annotations:
-   services.k8s.aws/region: us-east-1
+   services.k8s.aws/region: CHANGE_HERE
 spec:
- name: aecio-ack-lambda-hello-word
+ name: CHANGE_HERE
  packageType: Image
  code:
-     imageURI: 743047814061.dkr.ecr.us-east-1.amazonaws.com/aecio-ack-lambda-hello-word:latest
- role: arn:aws:iam::743047814061:role/aecio-ack-lambda-hello-word
+     imageURI: CHANGE_HERE.dkr.ecr.CHANGE_HERE.amazonaws.com/CHANGE_HERE:latest
+ role: arn:aws:iam::CHANGE_HERE:role/CHANGE_HERE
  description: function created by ACK lambda-controller e2e tests
  environment:
   variables:
